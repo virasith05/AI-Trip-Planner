@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Trip Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="navbar-logo">AI Trip Planner</a>
+      <ul class="navbar-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#trip-planner">Plan</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+      <ul class="navbar-auth">
+        <li><a href="#login" class="auth-link">Login</a></li>
+        <li><a href="#signup" class="auth-link">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>AI Trip Planner</h1>
+      <p>Plan your perfect trip with the power of AI — smarter, faster, and tailored to you.</p>
+      <a href="#trip-planner" class="hero-btn">Start Planning</a>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <h3>1. Input Details</h3>
+        <p>Enter your destination, budget, and preferences.</p>
+      </div>
+      <div class="step">
+        <h3>2. AI Analyzes</h3>
+        <p>Our AI generates a tailored itinerary for your trip.</p>
+      </div>
+      <div class="step">
+        <h3>3. Get Your Plan</h3>
+        <p>Review, download, or tweak your personalized trip plan.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trip Planner Input -->
+  <section class="trip-planner" id="trip-planner">
+    <h2>Plan Your Trip</h2>
+    <form id="trip-form">
+      <input type="text" id="destination" placeholder="Destination" required />
+      <input type="number" id="days" placeholder="Number of Days" required />
+      <input type="text" id="interests" placeholder="Interests (e.g., beach, hiking)" required />
+      <button type="submit">Generate Plan</button>
+    </form>
+  </section>
+
+  <!-- Output Preview -->
+  <section class="output-preview" id="output">
+    <h2>Your AI-Generated Trip Plan</h2>
+    <div id="plan-output">
+      <p>Fill out the form to see your personalized trip!</p>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Travelers Say</h2>
+    <div class="testimonial">
+      <p>"This AI planner saved me hours of research! Loved my trip!"</p>
+      <span>- Alex M.</span>
+    </div>
+    <div class="testimonial">
+      <p>"A game-changer for last-minute travel planning."</p>
+      <span>- Priya R.</span>
+    </div>
+  </section>
+
+  <!-- AI Features -->
+  <section class="features" id="features">
+    <h2>Why Use Our AI?</h2>
+    <ul>
+      <li>🧠 Smart recommendations based on your preferences</li>
+      <li>⏱ Instant itinerary generation</li>
+      <li>💸 Budget-conscious planning</li>
+      <li>🌍 Global destination support</li>
+    </ul>
+  </section>
+
+  <!-- Email subscribe CTA -->
+  <section class="cta" id="subscribe">
+    <div class="cta-content">
+      <h2>Stay Updated</h2>
+      <p>Get exclusive AI travel tips and trip deals in your inbox.</p>
+      <form id="subscribe-form">
+        <input type="email" id="email-input" placeholder="Enter your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+      <span id="subscribe-message"></span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>AI Trip Planner</h3>
+        <p>Smarter travel planning at your fingertips.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#trip-planner">Plan</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <p>virasith1234@gmail.com</p>
+        <p>+91 8555053321</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> AI Trip Planner</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

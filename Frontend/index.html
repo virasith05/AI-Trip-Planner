@@ -21,8 +21,8 @@
         <li><a href="#subscribe">Subscribe</a></li>
       </ul>
       <ul class="navbar-auth">
-        <li><a href="#login" class="auth-link">Login</a></li>
-        <li><a href="#signup" class="auth-link">Sign Up</a></li>
+        <li><a href="login.html" class="auth-link">Login</a></li>
+        <li><a href="signup.html" class="auth-link">Sign Up</a></li>
       </ul>
     </div>
   </nav>
@@ -137,6 +137,26 @@
       <p>&copy; <span id="current-year"></span> AI Trip Planner</p>
     </div>
   </footer>
+
+  <!-- Chatbot Icon and Box -->
+<div class="chatbot-container">
+  <div class="chatbot-toggle-wrapper">
+    <button id="chatbot-toggle" class="chatbot-icon">🤖 Bot</button>
+    <span class="chatbot-label">AI Chatbot</span>
+  </div>  
+  <div id="chatbot-box" class="chatbot-box hidden">
+    <div class="chatbot-header">
+      <span>AI Assistant</span>
+      <button id="chatbot-close">✖</button>
+    </div>
+    <div id="chatbot-messages" class="chatbot-messages"></div>
+    <form id="chatbot-form">
+      <input type="text" id="chatbot-input" placeholder="Ask me anything..." required />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+</div>
+
 
   <script src="script.js"></script>
 </body>

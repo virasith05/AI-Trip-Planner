@@ -1,0 +1,129 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+  }
+  
+  .header {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    position: relative;
+  }
+  
+  .header h1 {
+    margin: 0;
+    color: #00bfff;
+  }
+  
+  .back-link {
+    position: absolute;
+    left: 2rem;
+    top: 2.2rem;
+    text-decoration: none;
+    color: #00bfff;
+    font-weight: bold;
+  }
+  
+  .settings-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  .settings-card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.08);
+    margin-bottom: 2rem;
+  }
+  
+  .settings-card h2 {
+    margin-bottom: 1rem;
+    color: #00bfff;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  .input-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    background-color: #2e2e2e;
+    border: 1px solid #333;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .save-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #00bfff;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .save-btn:hover {
+    background-color: #00a5e0;
+  }
+  
+  .preferences {
+    background-color: #1c1c1c;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+  }
+  
+  .preferences h3 {
+    margin-top: 0;
+    color: #00bfff;
+  }
+  
+  .preferences label {
+    color: #f0f0f0;
+  }
+  
+  .logout-wrapper {
+    text-align: center;
+  }
+  
+  .logout-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff4c4c;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .logout-btn:hover {
+    background-color: #ff1c1c;
+  }
+  
+  /* ✅ Added: Password Match Message */
+  .password-check {
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+    display: block;
+    color: red;
+  }
+  
+  .password-check.match {
+    color: lightgreen;
+  }
+  

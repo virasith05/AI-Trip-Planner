@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+.header {
+    background-color: #1f1f1f;
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    position: relative;
+}
+
+.header h1 {
+    margin: 0;
+    color: #00bfff;
+}
+
+.back-link {
+    position: absolute;
+    left: 2rem;
+    top: 2.2rem;
+    text-decoration: none;
+    color: #00bfff;
+    font-weight: bold;
+}
+
+.profile-container {
+    max-width: 700px;
+    margin: auto;
+    padding: 2rem;
+}
+
+.profile-card {
+    text-align: center;
+    background: #1e1e1e;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 12px rgba(0, 191, 255, 0.08);
+}
+
+.avatar img {
+    width: 100px;
+    border-radius: 50%;
+    border: 3px solid #00bfff;
+}
+
+.edit-btn {
+    margin-top: 1rem;
+    padding: 10px 20px;
+    background: #00bfff;
+    border: none;
+    border-radius: 6px;
+    color: #121212;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.edit-btn:hover {
+    background: #00a5e0;
+}
+
+.stats {
+    background: #1c1c1c;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    border-radius: 10px;
+}
+
+.stats ul {
+    list-style: none;
+    padding: 0;
+}
+
+.stats li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.logout-wrapper {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.logout-btn {
+    background: transparent;
+    border: 2px solid #ff4c4c;
+    color: #ff4c4c;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: #ff4c4c;
+    color: #fff;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="signup.css">
+    <link rel="stylesheet" href="signup.css">
+   
+</head>
+<body>
+    <a href="index.html" class="back-link">
+        ← Back to site
+    </a>
+
+    <div class="signup-container">
+        <h2>Create Account</h2>
+        <p class="subtitle">Join us today and get started</p>
+        
+        <div class="success-message" id="success-message">
+            Account created successfully! Please check your email.
+        </div>
+
+        <form class="signup-form" id="signup-form">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+                <div id="password-strength">
+                    <div id="strength-bar"></div>
+                    <div id="strength-message">Password strength will appear here</div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+                <div id="password-message"></div>
+            </div>
+
+            <button type="submit">Create Account</button>
+        </form>
+
+        <p class="bottom-text">
+            Already have an account? <a href="login.html">Sign in</a>
+        </p>
+    </div>
+
+    <script>
+        // Password strength checker
+        const passwordInput = document.getElementById('password');
+        const strengthBar = document.getElementById('strength-bar');
+        const strengthMessage = document.getElementById('strength-message');
+        const confirmPasswordInput = document.getElementById('confirm-password');
+        const passwordMessage = document.getElementById('password-message');
+
+        function checkPasswordStrength(password) {
+            let strength = 0;
+            if (password.length >= 8) strength++;
+            if (/[a-z]/.test(password)) strength++;
+            if (/[A-Z]/.test(password)) strength++;
+            if (/[0-9]/.test(password)) strength++;
+            if (/[^A-Za-z0-9]/.test(password)) strength++;
+
+            return strength;
+        }
+
+        passwordInput.addEventListener('input', function() {
+            const password = this.value;
+            const strength = checkPasswordStrength(password);
+            
+            strengthBar.className = '';
+            
+            if (password.length === 0) {
+                strengthMessage.textContent = 'Password strength will appear here';
+                return;
+            }
+            
+            if (strength <= 2) {
+                strengthBar.classList.add('weak');
+                strengthMessage.textContent = 'Weak password';
+            } else if (strength <= 4) {
+                strengthBar.classList.add('medium');
+                strengthMessage.textContent = 'Medium password';
+            } else {
+                strengthBar.classList.add('strong');
+                strengthMessage.textContent = 'Strong password';
+            }
+        });
+
+        // Password confirmation checker
+        function checkPasswordMatch() {
+            const password = passwordInput.value;
+            const confirmPassword = confirmPasswordInput.value;
+            
+            if (confirmPassword.length === 0) {
+                passwordMessage.textContent = '';
+                passwordMessage.className = '';
+                return;
+            }
+            
+            if (password === confirmPassword) {
+                passwordMessage.textContent = 'Passwords match';
+                passwordMessage.className = 'match';
+            } else {
+                passwordMessage.textContent = 'Passwords do not match';
+                passwordMessage.className = 'mismatch';
+            }
+        }
+
+        confirmPasswordInput.addEventListener('input', checkPasswordMatch);
+        passwordInput.addEventListener('input', checkPasswordMatch);
+
+        // Form submission
+        document.getElementById('signup-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const successMessage = document.getElementById('success-message');
+            successMessage.classList.add('show');
+            
+            // Reset form after showing success message
+            setTimeout(() => {
+                this.reset();
+                strengthBar.className = '';
+                strengthMessage.textContent = 'Password strength will appear here';
+                passwordMessage.textContent = '';
+                passwordMessage.className = '';
+                successMessage.classList.remove('show');
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

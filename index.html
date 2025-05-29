@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Trip Planner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="navbar-logo">AI Trip Planner</a>
+      <ul class="navbar-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="dashboard.html">Dash Board</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#subscribe">Subscribe</a></li>
+      </ul>
+      <ul class="navbar-auth">
+        <li><a href="login.html" class="auth-link">Login</a></li>
+        <li><a href="signup.html" class="auth-link">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>AI Trip Planner</h1>
+      <p>Plan your perfect trip with the power of AI — smarter, faster, and tailored just for you.</p>
+      <a href="login.html" class="hero-btn">Start Planning Your Adventure</a>
+    </div>
+    <div class="hero-image">
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="carousel-slide active"
+            style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+              <h3>Santorini, Greece</h3>
+              <p>Discover breathtaking sunsets and stunning architecture</p>
+            </div>
+          </div>
+          <div class="carousel-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+              <h3>Kyoto, Japan</h3>
+              <p>Experience ancient temples and beautiful cherry blossoms</p>
+            </div>
+          </div>
+          <div class="carousel-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1502602898536-47ad22581b52?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2073&q=80')">
+            <div class="slide-content">
+              <h3>Paris, France</h3>
+              <p>Romance, culture, and world-class cuisine await</p>
+            </div>
+          </div>
+          <div class="carousel-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1506197603052-3cc9c3a201bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="slide-content">
+              <h3>Maldives</h3>
+              <p>Paradise islands with crystal-clear waters</p>
+            </div>
+          </div>
+          <div class="carousel-slide"
+            style="background-image: url('https://images.unsplash.com/photo-1539650116574-75c0c6dee9ef?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80')">
+            <div class="slide-content">
+              <h3>Dubai, UAE</h3>
+              <p>Modern luxury meets traditional Arabian culture</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="carousel-arrows carousel-prev">‹</button>
+        <button class="carousel-arrows carousel-next">›</button>
+
+        <div class="carousel-nav">
+          <div class="nav-dot active"></div>
+          <div class="nav-dot"></div>
+          <div class="nav-dot"></div>
+          <div class="nav-dot"></div>
+          <div class="nav-dot"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works -->
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon">📍</div>
+        <h3>1. Input Details</h3>
+        <p>Tell us your destination, budget, travel dates, and personal preferences to get started.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">🤖</div>
+        <h3>2. AI Analyzes</h3>
+        <p>Our advanced AI processes thousands of data points to create your perfect itinerary.</p>
+      </div>
+      <div class="step">
+        <div class="step-icon">✨</div>
+        <h3>3. Get Your Plan</h3>
+        <p>Receive a detailed, personalized trip plan that you can customize and share.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trip Planner Input
+  <section class="trip-planner" id="trip-planner">
+    <h2>Plan Your Dream Trip</h2>
+    <form id="trip-form" class="trip-form">
+      <input type="text" id="destination" placeholder="Where do you want to go?" required />
+      <input type="number" id="days" placeholder="Number of Days" required />
+      <input type="text" id="interests" placeholder="Your interests (beach, culture, food...)" required />
+      <button type="button" onclick="window.location.href='login.html'" class="generate-btn">Generate My Trip Plan</button>
+    </form>
+  </section> -->
+
+
+  <!-- <section class="output-preview" id="output">
+    <h2>Your AI-Generated Trip Plan</h2>
+    <div id="plan-output">
+      <p>✈️ Fill out the form above to see your personalized trip plan come to life!</p>
+    </div>
+  </section> -->
+
+  <!-- Testimonials -->
+  <section class="testimonials" id="testimonials">
+    <h2>What Travelers Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <p>This AI planner saved me hours of research! My trip to Japan was absolutely perfect. Every recommendation was
+          spot-on!</p>
+        <span>- M Vineeth, Software Engineer</span>
+      </div>
+      <div class="testimonial">
+        <p>A complete game-changer for last-minute travel planning. Got an amazing itinerary for Paris in just minutes!
+        </p>
+        <span>- Priya R., Marketing Manager</span>
+      </div>
+      <div class="testimonial">
+        <p>The AI understood exactly what I was looking for. Best travel planning tool I've ever used!</p>
+        <span>- Rahul S., Entrepreneur</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI Features -->
+  <section class="features" id="features">
+    <h2>Why Choose Our AI?</h2>
+    <ul>
+      <li data-icon="🧠">Smart recommendations based on your unique preferences and travel style</li>
+      <li data-icon="⚡">Lightning-fast itinerary generation in under 30 seconds</li>
+      <li data-icon="💰">Budget-conscious planning that maximizes your travel value</li>
+      <li data-icon="🌍">Global destination support with local insights and hidden gems</li>
+      <li data-icon="📱">Mobile-friendly plans you can access anywhere, anytime</li>
+      <li data-icon="🔄">Real-time updates and flexible itinerary modifications</li>
+    </ul>
+  </section>
+
+  <!-- Email subscribe CTA -->
+  <section class="cta" id="subscribe">
+    <div class="cta-content">
+      <h2>Stay Updated</h2>
+      <p>Get exclusive AI travel tips, destination guides, and special offers delivered to your inbox.</p>
+      <form id="subscribe-form" class="subscribe-form">
+        <input type="email" id="email-input" placeholder="Enter your email address" required />
+        <button type="submit">Subscribe Now</button>
+      </form>
+      <span id="subscribe-message"></span>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="footer">
+    <div class="footer-container">
+      <div class="footer-about">
+        <h3>AI Trip Planner</h3>
+        <p>Revolutionizing travel planning with artificial intelligence. Create unforgettable journeys with personalized
+          itineraries designed just for you.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#trip-planner">Plan Trip</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#subscribe">Newsletter</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h4>Get in Touch</h4>
+        <p>📧 virasith1234@gmail.com</p>
+        <p>📱 +91 8555053321</p>
+        <p>🌐 Available 24/7 for support</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="current-year">2024</span> AI Trip Planner. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Icon and Box -->
+  <div class="chatbot-container">
+    <div class="chatbot-toggle-wrapper">
+      <button id="chatbot-toggle" class="chatbot-icon">💬</button>
+      <span class="chatbot-label">AI Assistant</span>
+    </div>
+    <div id="chatbot-box" class="chatbot-box hidden">
+      <div class="chatbot-header">
+        <span>Travel Assistant</span>
+        <button id="chatbot-close">✕</button>
+      </div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <p>👋 Hello! I'm your AI travel assistant. How can I help you plan your next adventure?</p>
+      </div>
+      <form id="chatbot-form">
+        <input type="text" id="chatbot-input" placeholder="Ask me about destinations, tips..." required />
+        <button type="submit">Send</button>
+
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    class Carousel {
+      constructor() {
+        this.currentSlide = 0;
+        this.slides = document.querySelectorAll('.carousel-slide');
+        this.dots = document.querySelectorAll('.nav-dot');
+        this.prevBtn = document.querySelector('.carousel-prev');
+        this.nextBtn = document.querySelector('.carousel-next');
+        this.totalSlides = this.slides.length;
+
+        this.init();
+      }
+
+      init() {
+        // Add event listeners
+        this.prevBtn.addEventListener('click', () => this.prevSlide());
+        this.nextBtn.addEventListener('click', () => this.nextSlide());
+
+        // Add click events to dots
+        this.dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => this.goToSlide(index));
+        });
+
+        // Auto-play carousel
+        this.startAutoPlay();
+      }
+
+      goToSlide(slideIndex) {
+        // Remove active class from current slide and dot
+        this.slides[this.currentSlide].classList.remove('active');
+        this.dots[this.currentSlide].classList.remove('active');
+
+        // Update current slide
+        this.currentSlide = slideIndex;
+
+        // Add active class to new slide and dot
+        this.slides[this.currentSlide].classList.add('active');
+        this.dots[this.currentSlide].classList.add('active');
+      }
+
+      nextSlide() {
+        const nextIndex = (this.currentSlide + 1) % this.totalSlides;
+        this.goToSlide(nextIndex);
+      }
+
+      prevSlide() {
+        const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
+        this.goToSlide(prevIndex);
+      }
+
+      startAutoPlay() {
+        this.autoPlayInterval = setInterval(() => {
+          this.nextSlide();
+        }, 4000); // Change slide every 4 seconds
+      }
+
+      stopAutoPlay() {
+        clearInterval(this.autoPlayInterval);
+      }
+    }
+
+    // Initialize carousel when DOM is loaded
+    document.addEventListener('DOMContentLoaded', () => {
+      const carousel = new Carousel();
+
+      // Pause auto-play when user hovers over carousel
+      const carouselContainer = document.querySelector('.carousel-container');
+      carouselContainer.addEventListener('mouseenter', () => carousel.stopAutoPlay());
+      carouselContainer.addEventListener('mouseleave', () => carousel.startAutoPlay());
+    });
+  </script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>👤 My Profile</h1>
+    <a href="dashboard.html" class="back-link">← Back to Home</a>
+  </header>
+
+  <main class="profile-container">
+    <section class="profile-card">
+      <div class="avatar">
+        <img src="virasith.jpg" alt="Profile Picture" />
+      </div>
+      <h2 id="user-name">Sai Virasith</h2>
+      <p id="user-email">virasith1234@gmail.com</p>
+      <button class="edit-btn" onclick="window.location.href='settings.html'">Edit Profile</button>
+    </section>
+
+    <section class="stats">
+      <h3>📊 Trip Stats</h3>
+      <ul>
+        <li>Total Trips: <strong id="total-trips">6</strong></li>
+        <li>Most Visited Country: <strong id="fav-country">France</strong></li>
+        <li>Last Trip: <strong id="last-trip">Paris, June 2025</strong></li>
+      </ul>
+    </section>
+
+    <div class="logout-wrapper">
+      <button class="logout-btn">Logout</button>
+    </div>
+  </main>
+
+  <script src="profile.js"></script>
+</body>
+</html>

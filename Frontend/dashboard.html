@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dashboard - AI Trip Planner</title>
   <link rel="stylesheet" href="dashboard.css" />
 </head>
+
 <body>
   <header class="dashboard-header">
     <h1>Welcome back, Sai Virasith!</h1>
@@ -42,26 +44,30 @@
     </section>
   </main>
 
-    <!-- Chatbot Icon and Box -->
-<div class="chatbot-container">
+  <!-- Chatbot Icon and Box -->
+  <div class="chatbot-container">
     <div class="chatbot-toggle-wrapper">
-      <button id="chatbot-toggle" class="chatbot-icon">🤖 Bot</button>
-      <span class="chatbot-label">AI Chatbot</span>
-    </div>  
+      <button id="chatbot-toggle" class="chatbot-icon">💬</button>
+      <span class="chatbot-label">AI Assistant</span>
+    </div>
     <div id="chatbot-box" class="chatbot-box hidden">
       <div class="chatbot-header">
-        <span>AI Assistant</span>
-        <button id="chatbot-close">✖</button>
+        <span>Travel Assistant</span>
+        <button id="chatbot-close">✕</button>
       </div>
-      <div id="chatbot-messages" class="chatbot-messages"></div>
+      <div id="chatbot-messages" class="chatbot-messages">
+        <p>👋 Hello! I'm your AI travel assistant. How can I help you plan your next adventure?</p>
+      </div>
       <form id="chatbot-form">
-        <input type="text" id="chatbot-input" placeholder="Ask me anything..." required />
+        <input type="text" id="chatbot-input" placeholder="Ask me about destinations, tips..." required />
         <button type="submit">Send</button>
+
       </form>
     </div>
   </div>
   <script src="dashboard.js"></script>
-  
-  
+
+
 </body>
+
 </html>

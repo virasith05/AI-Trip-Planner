@@ -4,60 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>AI Trip Planner</title>
-  <link rel="stylesheet" href="trip-planner.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="trip-planner.css">
 </head>
 <body>
   <header class="trip-header">
     <h1>Plan Your Dream Trip ✈️</h1>
-    <a href="dashboard.html" class="back-link">← Back to Home</a>
+    <p style="font-size: 1.2rem; color: #718096; margin-bottom: 20px; position: relative; z-index: 2;">Create personalized itineraries with AI-powered recommendations</p>
+    <a href="index.html" class="back-link">← Back to Home</a>
   </header>
 
   <main class="trip-main">
-    <form class="trip-form">
-      <label>
-        Destination:
-        <input type="text" placeholder="e.g., Paris, Tokyo" required />
-      </label>
+    <form class="trip-form" id="tripForm">
+      <div class="form-row single">
+        <div class="form-group">
+          <label>
+            🌍 Destination
+            <input type="text" name="destination" placeholder="e.g., Paris, Tokyo, New York" required />
+          </label>
+        </div>
+      </div>
 
-      <label>
-        Travel Dates:
-        <input type="date" />
-      </label>
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            📅 Travel Date
+            <input type="date" name="travel-date" required />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            ⏰ Duration (days)
+            <input type="number" name="duration" placeholder="e.g., 7" min="1" max="30" required />
+          </label>
+        </div>
+      </div>
 
-      <label>
-        Budget (₹):
-        <input type="number" placeholder="e.g., 1000" />
-      </label>
+      <div class="form-row">
+        <div class="form-group">
+          <label>
+            💰 Budget (₹)
+            <input type="number" name="budget" placeholder="e.g., 50000" min="0" />
+          </label>
+        </div>
+        <div class="form-group">
+          <label>
+            👥 Travel Type
+            <select name="travel-type" required>
+              <option value="">Select travel type</option>
+              <option value="solo">Solo Adventure</option>
+              <option value="couple">Romantic Getaway</option>
+              <option value="family">Family Trip</option>
+              <option value="friends">Friends Group</option>
+              <option value="business">Business Travel</option>
+            </select>
+          </label>
+        </div>
+      </div>
 
-      <label>
-        Interests:
-        <select>
-          <option>Adventure</option>
-          <option>Relaxation</option>
-          <option>Culture</option>
-          <option>Nature</option>
-          <option>Food</option>
-        </select>
-      </label>
+      <div class="form-row single">
+        <div class="form-group">
+          <label>
+            🎯 Interests & Preferences
+            <select name="interests" required>
+              <option value="">What interests you most?</option>
+              <option value="adventure">Adventure & Outdoor Activities</option>
+              <option value="culture">Culture & History</option>
+              <option value="relaxation">Relaxation & Wellness</option>
+              <option value="food">Food & Culinary Experiences</option>
+              <option value="nature">Nature & Wildlife</option>
+              <option value="nightlife">Nightlife & Entertainment</option>
+              <option value="shopping">Shopping & Local Markets</option>
+              <option value="photography">Photography & Sightseeing</option>
+            </select>
+          </label>
+        </div>
+      </div>
 
-      <label>
-        Trip Duration (days):
-        <input type="number" min="1" />
-      </label>
+      <div class="form-row single">
+        <div class="form-group">
+          <label>
+            🏨 Accommodation Preference
+            <select name="accommodation">
+              <option value="">Select accommodation type</option>
+              <option value="luxury">Luxury Hotels & Resorts</option>
+              <option value="boutique">Boutique Hotels</option>
+              <option value="budget">Budget-Friendly Options</option>
+              <option value="hostel">Hostels & Backpacker Stays</option>
+              <option value="airbnb">Vacation Rentals & Airbnb</option>
+              <option value="local">Local Guesthouses</option>
+            </select>
+          </label>
+        </div>
+      </div>
 
-      <label>
-        Travel Type:
-        <select>
-          <option>Solo</option>
-          <option>Couple</option>
-          <option>Family</option>
-          <option>Friends</option>
-        </select>
-      </label>
-
-      <button type="submit" class="plan-btn">Plan My Trip</button>
+      <button type="submit" class="plan-btn" id="planBtn">
+        Create My Perfect Trip
+      </button>
     </form>
   </main>
-  <script src="trip-planner.js"></script>
+
+  <script src="trip-planner.js">
+    document.getElementById('tripForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const button = document.getElementById('planBtn');
+      const form = this;
+      
+      // Add loading state
+      button.classList.add('loading');
+      button.disabled = true;
+      
+      // Simulate API call
+      setTimeout(() => {
+        // Remove loading state
+        button.classList.remove('loading');
+        button.disabled = false;
+        
+        // Add success animation
+        form.classList.add('form-success');
+        
+        // Show success message
+        alert('🎉 Your trip plan is being generated! You will receive a detailed itinerary shortly.');
+        
+        // Remove success animation
+        setTimeout(() => {
+          form.classList.remove('form-success');
+        }, 600);
+        
+        // Reset form
+        setTimeout(() => {
+          form.reset();
+        }, 2000);
+      }, 2000);
+    });
+
+    // Add floating label effect
+    document.querySelectorAll('input, select').forEach(element => {
+      element.addEventListener('focus', function() {
+        this.parentElement.classList.add('focused');
+      });
+      
+      element.addEventListener('blur', function() {
+        if (!this.value) {
+          this.parentElement.classList.remove('focused');
+        }
+      });
+    });
+
+    // Set minimum date to today
+    const today = new Date().toISOString().split('T')[0];
+    document.querySelector('input[name="travel-date"]').setAttribute('min', today);
+  </script>
 </body>
 </html>

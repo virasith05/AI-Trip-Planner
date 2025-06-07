@@ -3,9 +3,16 @@ document.querySelector(".reset-form").addEventListener("submit", function (e) {
     const email = document.getElementById("reset-email").value.trim();
   
     if (email) {
-      alert("Reset link sent to your email (placeholder).");
-      // Redirect to login or confirmation page
-      window.location.href = "login.html";
+      // Show success message
+      const successMessage = document.getElementById("success-message");
+      successMessage.classList.add("show");
+      
+      // Reset form and hide success message after delay
+      setTimeout(() => {
+        this.reset();
+        successMessage.classList.remove("show");
+        window.location.href = "login.html";
+      }, 3000);
     } else {
       alert("Please enter your email address.");
     }

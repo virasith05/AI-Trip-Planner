@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    const values = { name, email, password, mobile, dob };
+    const values = { name, email, password, phone: mobile, dob };
 
     const response = await RegisterUser(values);
     if (response?.success) {

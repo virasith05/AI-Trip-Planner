@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Itinerary</title>
+  <link rel="stylesheet" href="../css/itinerary.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1>🧭 Your Personalized Paris Itinerary</h1>
+    <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+  </header>
+
+  <main class="main-content">
+    <!-- Daily Itinerary -->
+    <section class="itinerary-section">
+      <h2>📅 Day-wise Plan</h2>
+      <div id="itinerary-container"></div>
+    </section>
+
+    <!-- Hotel Recommendations -->
+    <section class="hotel-section">
+      <h2>🏨 Hotel Recommendations</h2>
+      <div id="hotel-container"></div>
+    </section>
+
+    <!-- Budget Breakdown -->
+    <section class="budget-section">
+      <h2>💰 Budget Breakdown</h2>
+      <ul id="budget-breakdown"></ul>
+    </section>
+
+    <!-- Travel, Food Tips, Notes -->
+    <section class="tips-section">
+      <h2>💡 Travel Tips</h2>
+      <ul id="travel-tips"></ul>
+
+      <h2>🍽️ Food Tips</h2>
+      <ul id="food-tips"></ul>
+
+      <h2>📝 Notes</h2>
+      <ul id="notes"></ul>
+    </section>
+
+    <!-- Action Buttons -->
+    <div class="buttons">
+      <button id="save-trip" class="save-button">💾 Save My Trip</button>
+      <button id="share-trip" class="save-button">🔗 Share Trip</button>
+      <button id="download-pdf" class="save-button">⬇️ Download PDF</button>
+    </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <script src="../js/itinerary.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+  <div id="trip-saved-modal" class="modal-overlay" style="display:none;">
+    <div class="modal-content">
+      <h3>Trip Saved!</h3>
+      <p>Trip saved to your account!</p>
+    </div>
+  </div>
+</body>
+
+</html>

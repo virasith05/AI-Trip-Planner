@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard - AI Trip Planner</title>
+  <link rel="stylesheet" href="../css/dashboard.css" />
+</head>
+
+<body>
+  <header class="dashboard-header">
+    <h1 id="welcome-message">Welcome back</h1>
+    <a href="../index.html"><button class="nav-links" id="back">← Back to Home</button></a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="trip-planner.html">Plan Trip</a></li>
+        <li><a href="my-trips.html">My Trips</a></li>
+        <li><a href="profile.html">Profile</a></li>
+        <li><a href="login.html" id="logout-link">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="dashboard-main">
+    <section class="card-grid">
+      <div class="card">
+        <h2>Plan a New Trip</h2>
+        <p>Let the AI help you build your next adventure.</p>
+        <a href="trip-planner.html" class="btn">Start Planning</a>
+      </div>
+
+      <div class="card">
+        <h2>My Trips</h2>
+        <p>See your saved or past trip itineraries.</p>
+        <a href="my-trips.html" class="btn">View Trips</a>
+      </div>
+
+      <div class="card">
+        <h2>Profile & Settings</h2>
+        <p>Update your preferences, email, or password.</p>
+        <a href="profile.html" class="btn">Go to Profile</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/dashboard.js"></script>
+</body>
+
+</html>
